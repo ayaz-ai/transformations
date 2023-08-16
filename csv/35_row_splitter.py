@@ -20,7 +20,7 @@ for chunk in reader:
     output_csv_path = os.path.join(output_dir, f'batch_{file_counter}.csv')
 
     # Write the chunk to the output CSV file
-    chunk.to_csv(output_csv_path, index=False)
+    chunk.to_csv(output_csv_path, index=False, header=False)
 
     file_counter += 1
 

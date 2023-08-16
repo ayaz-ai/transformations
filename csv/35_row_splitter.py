@@ -2,10 +2,10 @@ import pandas as pd
 import os
 
 # Set the path to the input CSV file
-input_csv_path = 'temp_csv.csv'
+input_csv_path = 'merged_output.csv'
 
 # Create a directory to store the output CSV files
-output_dir = '.\\output_csv_files'
+output_dir = '.\\csv_batches'
 os.makedirs(output_dir, exist_ok=True)
 
 # Read the input CSV file in chunks
@@ -17,7 +17,7 @@ file_counter = 1
 
 for chunk in reader:
     # Generate output CSV file path
-    output_csv_path = os.path.join(output_dir, f'output_{file_counter}.csv')
+    output_csv_path = os.path.join(output_dir, f'batch_{file_counter}.csv')
 
     # Write the chunk to the output CSV file
     chunk.to_csv(output_csv_path, index=False)

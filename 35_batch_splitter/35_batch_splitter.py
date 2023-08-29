@@ -2,10 +2,10 @@ import pandas as pd
 import os
 
 # Set the path to the input CSV file
-input_csv_path = 'merged_output.csv'
+input_csv_path = '../../i_o/input/35_batch_spliter/input.csv'
 
 # Create a directory to store the output CSV files
-output_dir = '.\\csv_batches'
+output_dir = '../../i_o/output/35_batch_spliter'
 os.makedirs(output_dir, exist_ok=True)
 
 # Read the input CSV file in chunks
